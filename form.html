@@ -3,7 +3,9 @@
     <!--
         Purpose of this page is to ask a few questions of the user, as in:
         Have they seen any of the movies before,
-        If so which ones
+        If so which ones,
+        Recommend movies they enjoy,
+        Sign up for newsletter
     -->
     <head>
         <title>Survey</title>
@@ -13,15 +15,41 @@
     <style>
         body
         {
+            /*Sets background color*/
             background-color: black;
         }
     </style>
     <body>
         <h1 style="text-align: center; color: lightgray; font-size: 65px;"><u>Survey!</u></h1>
-        <form method="get" style="text-align: center; color: white;">
+        <form method="get" style="text-align: center; color: white;" action="thankyou.html">
             <!--Check box for asking if the user has watched any of the previously mentioned movies before or not-->
-            <label><input type="checkbox" name="watched" checked>Yes</label>
+            Have you seen any of these movies before?
+            <label><input type="checkbox" name="watched"></label>
+            <!--I put the text before because I felt it was better having it before the check mark-->
             <br/>
+            <br/>
+
+            <!--Text area where the user can input certain data-->
+            <label for="Comments">If so, which ones?</label> <br/>
+            <textarea id="Comments" name="Comments" rows="4" cols="40" placeholder="Please put your answer here"></textarea>
+            <br/>
+            <br/>
+
+            <!--Text input for recommending a movie-->
+            <label for="rec">Recomend me a movie!</label>
+            <input type="text" id="rec" name="rec">
+            <br/>
+            <br/>
+
+            <!--Email input where users can input their email and sign up for monthly news letters -->
+            <b>Sign up for monthly movie newsletters!</b>
+            <br/>
+            <label for="email">Enter your email:</label>
+            <input type="email" id="email" name="email" placeholder="1234@something.com">
+
+            <!--Submit button that brings you to a thankyou page after pressing it-->
+            <input type="submit">
         </form>
+
     </body>
 </html>
